@@ -1,0 +1,34 @@
+#details {
+    background: $darkgray;
+    padding-top: 108px;
+    color: $gray;
+    .container {
+        text-align: center;
+        img {
+            margin-bottom: 16px;
+        }
+        p {
+            line-height: 30px;
+        }
+        .content {
+            display: flex;
+            .col {
+                flex: 1;
+                margin-top: 96px;
+                .spotify-feature {
+                    text-align: left;
+                    padding-left: 96px;
+                    padding-top: 48px;
+                    h4 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 17px;
+                        margin-top: 8px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+    }
+}

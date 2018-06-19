@@ -1,0 +1,80 @@
+#products {
+    background: $lightgray;
+    padding-top: 128px;
+    padding-bottom: 64px;
+    .intro {
+        display: flex;
+        .col {
+            flex: 1;
+            h2 {
+                color: $whitesmoke;
+                font-size: 40px;
+                font-weight: 400;
+                width: 50%;
+                line-height: 56px;
+            }
+            p {
+                color: $gray;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            a {
+                display: inline-block;
+                color: $whitesmoke;
+                text-decoration: none;
+                margin-top: 16px;
+                i {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+    .products {
+        display: flex;
+        margin-top: 72px;
+        .product {
+            flex: 1;
+            border-radius: 4px;
+            background: $silver;
+            margin: 8px;
+            cursor: pointer;
+            &:hover {
+                margin-top: 4px;
+                background: $gainsboro;
+            }
+
+            .product-img {
+                height: 350px;
+                text-align: center;
+                padding-top: 64px;
+                img {
+                    box-shadow: 0 128px 128px -42px #111;
+                }
+            }
+
+            .item-and-price {
+                margin: 0 16px;
+                font-size: 18px;
+                color: $darkgray;
+                border-bottom: 1.5px $gray solid;
+                padding-bottom: 16px;
+                .price {
+                    float: right;
+                }
+            }
+
+            .product-buy {
+                margin: 24px 16px 0;
+                font-size: 18px;
+                color: $darkgray;
+                padding-bottom: 16px;
+                .circle {
+                    display: inline-block;
+                    background: white;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}

@@ -6,7 +6,10 @@
         background: $whitesmoke;
         border-radius: 2px;
         padding: 40px;
-        display: flex;
+        margin: 0 156px;
+        .container {
+            display: flex;        
+        }
         .feature {
             padding: 0 30px;
             h2 {
