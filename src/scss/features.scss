@@ -1,0 +1,30 @@
+#info {
+    background: $darkslategray;
+    .features {
+        background: $whitesmoke;
+        border-radius: 2px;
+        padding: 48px 50px;
+        display: flex;
+        .feature {
+            padding: 0 30px;
+            h2 {
+                font-weight: 500;
+                font-size: 20px;
+            }
+            hr {
+                margin-top: 8px;
+                width: 20%;
+            }
+            p {
+                margin-top: 8px;
+                color: $gray;
+                font-weight: 500;
+                line-height: 24px;
+            }
+            a {
+                color: $darkslategray;
+                text-decoration: none;
+            }
+        }
+    }
+}
