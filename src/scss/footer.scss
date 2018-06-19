@@ -1,0 +1,21 @@
+footer {
+    background: $darkgray;
+    padding: 96px 64px 64px;
+    .row {
+        div {
+            display: inline-block;
+        }
+        a, span {
+            color: gray;
+            text-decoration: none;
+            padding: 0 16px;
+        }
+        .other-links, .by {
+            float: right;
+        }
+    }
+
+    .copyrights {
+        margin-top: 64px;
+    }
+}
