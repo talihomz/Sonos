@@ -31,12 +31,13 @@
     }
     .products {
         display: flex;
-        margin-top: 72px;
+        margin-top: 72px;        
         .product {
             flex: 1;
             border-radius: 4px;
             background: $silver;
             margin: 8px;
+            padding-bottom: 16px;
             cursor: pointer;
             &:hover {
                 margin-top: 4px;
@@ -70,9 +71,24 @@
                 padding-bottom: 16px;
                 .circle {
                     display: inline-block;
-                    background: white;
+                    border-radius: 50%;
+                    border: $lightgray 1px solid;
+                    margin-right: 4px;
                     width: 16px;
                     height: 16px;
+                }
+                .white {
+                    background: $whitesmoke;
+                }
+                .black {
+                    background: $darkgray;
+                }
+                button {
+                    float: right;
+                    border: solid 1px $darkslategray;
+                    padding: 8px 16px;
+                    background: transparent;
+                    font-size: 17px;
                 }
             }
         }
