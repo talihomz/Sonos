@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../images/_0000_intro.png');
+    padding-top: 8px;
 
     nav {
         padding: 8px;
@@ -33,6 +34,37 @@
               border: solid 1px $darkslategray;
               padding: 8px 32px;
           }
+        }
+    }
+
+    .content {
+        margin-top: 128px;
+        width: 41%;
+        h1 {
+            font-size: 36px;
+            color: $darkslategray;
+            font-weight: 400;
+            line-height: 48px;
+        }
+        p {
+            margin-top: 30px;
+            color: gray;
+            line-height: 24px;
+            font-weight: 500;
+        }
+        button {
+            margin-top: 56px;
+            padding: 12px 24px;
+            background: $darkslategray;
+            border: none;
+            color: $white;
+            i {
+                margin-top: 8px;
+                margin-left: 28px;
+            }
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

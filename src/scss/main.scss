@@ -10,6 +10,12 @@ body, html {
   overflow: auto;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;            
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
