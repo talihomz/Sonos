@@ -1,7 +1,30 @@
+@import 'variables';
+@import 'colors';
+@import 'intro';
+
 // Sava said we call this general stuff
 body, html {
   height: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
   overflow: auto;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media only screen and (min-width: $xs) {
+    width: 750px;
+  }
+
+  @media only screen and (min-width: $sm) {
+    width: 970px;
+  }
+
+  @media only screen and (min-width: $md) {
+    width: 1170px;
+  }
 }
