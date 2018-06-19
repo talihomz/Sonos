@@ -30,6 +30,8 @@ deploy:
     - echo '{}' > composer.json
     - echo '<?php include_once("home.html"); ?>' > index.php
     - mv index.html home.html
+    - git config --global user.email "wahomekevin@gmail.com"
+    - git config --global user.name "Wahome Kevin"
     - git add .
     - git commit -m "Initial commit"
     - heroku git:remote -a talihomz-sonos
