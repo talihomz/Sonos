@@ -1,0 +1,36 @@
+build:
+  image: registry.gitlab.com/wahomekevin/web-starter:latest
+  stage: build
+  only: 
+    - master
+  artifacts:
+    paths: 
+      - ./public/
+  script:
+    - ln -s /app/node_modules node_modules
+    - cp /app/package.json package.json
+    - cp /app/gulpfile.js gulpfile.js
+    - npm run build
+   
+# test1:
+#   stage: test
+#   script: 
+#     - echo "Do a test here"
+#     - echo "For example run a test suite"
+   
+deploy:
+  image: registry.gitlab.com/wahomekevin/heroku-deploy-website:latest
+  stage: deploy
+  only: 
+    - master
+  dependencies:
+    - build
+  script:
+    - cd public
+    - echo '{}' > composer.json
+    - echo '<?php include_once("home.html"); ?>' > index.php
+    - mv index.html home.html
+    - git add .
+    - git commit -m "Initial commit"
+    - heroku git:remote -a talihomz-sonos
+    - git push heroku master
