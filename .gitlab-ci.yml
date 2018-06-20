@@ -26,7 +26,7 @@ deploy:
   dependencies:
     - build
   variables:
-    - GIT_STRATEGY: none
+    GIT_STRATEGY: none
   script:
     - cd public
     - echo '{}' > composer.json
