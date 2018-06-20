@@ -26,11 +26,13 @@ deploy:
   dependencies:
     - build
   script:
+    - rm -rf .git
     - cd public
     - echo '{}' > composer.json
     - echo '<?php include_once("home.html"); ?>' > index.php
     - mv index.html home.html
+    - git init
     - git add .
-    - git commit -m "Initial commit"
+    - git commit -m "Ready for deploy"
     - heroku git:remote -a sonos-concept
     - git push heroku master -f
