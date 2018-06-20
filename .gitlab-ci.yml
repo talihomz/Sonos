@@ -25,8 +25,9 @@ deploy:
     - master
   dependencies:
     - build
+  variables:
+    - GIT_STRATEGY: none
   script:
-    - rm -rf .git
     - cd public
     - echo '{}' > composer.json
     - echo '<?php include_once("home.html"); ?>' > index.php
