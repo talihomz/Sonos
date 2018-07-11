@@ -1,16 +1,11 @@
 build:
   image: registry.gitlab.com/wahomekevin/web-starter:latest
   stage: build
-  only: 
-    - master
   artifacts:
     paths: 
       - ./public/
   script:
-    - ln -s /app/node_modules node_modules
-    - cp /app/package.json package.json
-    - cp /app/gulpfile.js gulpfile.js
-    - npm run build
+    - sh $APP_PATH/install.sh
    
 # test1:
 #   stage: test
@@ -19,21 +14,11 @@ build:
 #     - echo "For example run a test suite"
    
 deploy:
-  image: registry.gitlab.com/wahomekevin/heroku-deploy-website:latest
+  image: registry.gitlab.com/wahomekevin/website-deploy:latest
   stage: deploy
   only: 
-    - master
+    - develop
   dependencies:
     - build
-  variables:
-    GIT_STRATEGY: none
   script:
-    - cd public
-    - echo '{}' > composer.json
-    - echo '<?php include_once("home.html"); ?>' > index.php
-    - mv index.html home.html
-    - git init
-    - git add .
-    - git commit -m "Ready for deploy"
-    - heroku git:remote -a sonos-concept
-    - git push heroku master -f
+    - sh $APP_PATH/sync.sh
