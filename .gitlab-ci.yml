@@ -1,6 +1,8 @@
 build:
   image: registry.gitlab.com/wahomekevin/web-starter:latest
   stage: build
+  only: 
+    - master
   artifacts:
     paths: 
       - ./public/
